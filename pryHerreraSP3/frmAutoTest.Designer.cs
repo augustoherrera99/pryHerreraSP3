@@ -261,6 +261,7 @@
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.mrcRegistro);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmAutoTest";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Auto Test";
