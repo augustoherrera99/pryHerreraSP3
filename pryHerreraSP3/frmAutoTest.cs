@@ -151,6 +151,9 @@ namespace pryHerreraSP3
                 turnos[Cantidad].Titular = txtTitular.Text;
                 // incrementar la cantidad de elementos cargados
                 Cantidad++;
+
+                MessageBox.Show("¡Registro exitoso!\n\nLe quedan " + (MAX - Cantidad) + " turnos.", "Estado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 // verificar si queda espacio en el arreglo
                 if (Cantidad == MAX)
                 {
@@ -203,6 +206,14 @@ namespace pryHerreraSP3
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close(); // cierra el formulario
+        }
+
+        private void txtTitular_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar) || Char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

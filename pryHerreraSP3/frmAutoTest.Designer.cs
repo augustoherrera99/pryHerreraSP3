@@ -114,6 +114,7 @@
             this.txtTitular.Name = "txtTitular";
             this.txtTitular.Size = new System.Drawing.Size(209, 20);
             this.txtTitular.TabIndex = 7;
+            this.txtTitular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTitular_KeyPress);
             // 
             // mrcRegistro
             // 
